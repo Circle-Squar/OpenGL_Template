@@ -1,0 +1,16 @@
+[submodule "dependence/glad"]
+	path = dependence/glad
+	url = https://github.com/Dav1dde/glad.git
+	branch = c
+[submodule "dependence/glfw"]
+	path = dependence/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "dependence/glm"]
+	path = dependence/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "dependence/stb"]
+	path = dependence/stb
+	url = https://github.com/nothings/stb.git
+[submodule "dependence/assimp"]
+	path = dependence/assimp
+	url = https://github.com/assimp/assimp.git
