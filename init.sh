@@ -15,6 +15,7 @@ then
   CVersion="c++11"
 fi
 CBeforeVersion=$(cat CMakeLists.txt|grep '\-std' |cut -d = -f 2 |cut -d \" -f 1) 
+CVersion="$CVersion)"
 
 read -p "Did you want to keep My hpp files? (y/n) " hppkeep
 
