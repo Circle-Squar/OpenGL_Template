@@ -12,7 +12,7 @@ set(TRUE_SRCDIR ${PROJECT_SOURCE_DIR}/Source)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(LIBS  )
 
-OPTION(USE_SHARED_LIB "Use Shared Lib Instade of Static Lib" ON)
+OPTION(USE_SHARED_LIB "Use Shared Lib Instade of Static Lib" OFF)
 
 #  Compile Settings
 #============================================================================
