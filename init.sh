@@ -74,7 +74,7 @@ function Submoudle_clone(){
 	done
 
 	cd ./Source/dependence/
-	rm * -rf
+	rm $submoudle -rf
 	for i in $Repos
 	do
 		if [ $i == "Dav1dde/glad" ]
