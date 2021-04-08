@@ -14,7 +14,7 @@
 git clone --recursive https://github.com/Circle-Squar/OpenGL_Template.git
 ```
 
-clone 下来，如果没有dependence的话自行补齐，如果可以使用init.sh初始化项目，然后用cmake即可 。
+clone 下来，如果没有dependence的话自行补齐 或使用init.sh 可以补全，如果可以请使用init.sh初始化项目，然后用cmake即可 。
 
 ##### Windows :
 
