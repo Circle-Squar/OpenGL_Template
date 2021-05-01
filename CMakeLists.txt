@@ -20,6 +20,7 @@ include_directories(
   ${TRUE_SRCDIR}/dependence/assimp/include/
   ${TRUE_SRCDIR}/dependence/glad/include/
   ${TRUE_SRCDIR}/dependence/glfw/include/
+  ${TRUE_SRCDIR}/dependence/Shader/
   ${TRUE_SRCDIR}/dependence/stb/
   ${TRUE_SRCDIR}/dependence/glm/
   ${TRUE_SRCDIR}/include
@@ -72,6 +73,15 @@ else(USE_SHARED_LIB)
   add_library(STB_IMAGE STATIC ${TRUE_SRCDIR}/dependence/stb/deprecated/stb_image.c)
 endif(USE_SHARED_LIB)
 set(LIBS ${LIBS} STB_IMAGE)
+
+#  Shader
+#============================================================================
+if(USE_SHARED_LIB)
+	add_library(SHADER_LIBS SHARED ${TRUE_SRCDIR}/dependence/Shader/Shader.cpp)
+else(USE_SHARED_LIB)
+	add_library(SHADER_LIBS STATIC ${TRUE_SRCDIR}/dependence/Shader/Shader.cpp)
+endif(USE_SHARED_LIB)
+set(LIBS ${LIBS} SHADER_LIBS)
 
 #  File execute
 #============================================================================

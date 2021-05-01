@@ -89,7 +89,6 @@ function Submoudle_clone(){
 
 
 function Project_init(){
-	hppkeep='y'
 	# Project Name
 	########################
 	read -p "Project Name : " ProjectName
@@ -108,11 +107,6 @@ function Project_init(){
 	fi
 	CBeforeVersion=$(cat CMakeLists.txt|grep '\-std' |cut -d = -f 2 |cut -d \" -f 1) 
 	CVersion="$CVersion)"
-	
-	
-	# Project Hpp
-	########################
-	read -p "Did you want to keep My hpp files? (y/n) " hppkeep
 	
 	
 	# Project Info
@@ -146,12 +140,6 @@ function Project_init(){
 	
 	echo [INFO] Removing NULL file
 	rm $(find ./ -name "Del_This_File") -rf
-	
-	if [[ $hppkeep == 'n' || $hppkeep == 'N' ]]
-	then
-	  echo [INFO] Removing My hpp files
-	  rm ./Source/include/* -rf
-	fi
 	
 	echo [INFO] Removing initfile.
 #	rm init.sh
