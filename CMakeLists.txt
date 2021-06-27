@@ -1,5 +1,12 @@
 cmake_minimum_required(VERSION 3.1)
 
+# Dll in Windows
+#============================================================================
+if(WIN32)
+	set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+	set(BUILD_SHARED_LIBS TRUE)
+endif(WIN32)
+
 # Project Setting
 #============================================================================
 project(OpenGL_Template)
@@ -12,7 +19,7 @@ set(TRUE_SRCDIR ${PROJECT_SOURCE_DIR}/Source)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(LIBS  )
 
-OPTION(USE_SHARED_LIB "Use Shared Lib Instade of Static Lib" OFF)
+OPTION(USE_SHARED_LIB "Use Shared Lib Instade of Static Lib" ON)
 
 #  Compile Settings
 #============================================================================
